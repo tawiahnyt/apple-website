@@ -7,7 +7,7 @@ import { heroVideo, smallHeroVideo } from "../utils";
 
 const Hero = () => {
   const [videoSrc, setVideoSrc] = useState(
-    window.innerWidth > 760 ? smallHeroVideo : heroVideo
+    window.innerWidth < 760 ? smallHeroVideo : heroVideo
   );
 
   const handleVideoSrcSet = () => {
@@ -30,6 +30,7 @@ const Hero = () => {
     gsap.to("#hero", { opacity: 1, delay: 2 });
     gsap.to("#cta", { opacity: 1, delay: 2, y: -50 });
   });
+
   return (
     <section className="w-full nav-height bg-black relative">
       <div className="h-5/6 w-full flex-center flex-col">
