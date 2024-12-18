@@ -7,7 +7,7 @@ import {
   View,
 } from "@react-three/drei";
 import Lights from "./Lights";
-import IPhone from "./iPhone";
+import IPhone from "./IPhone";
 import * as THREE from "three";
 import Loader from "./Loader";
 
