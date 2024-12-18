@@ -8,6 +8,7 @@ import { animateWithGsap } from "../utils/animation";
 
 const HowItWorks = () => {
   const videoRef = useRef();
+
   useGSAP(() => {
     gsap.from("#chip", {
       scrollTrigger: {
@@ -18,6 +19,17 @@ const HowItWorks = () => {
       scale: 2,
       duration: 2,
       ease: "power2.inOut",
+    });
+
+    gsap.to("#frameVideo", {
+      scrollTrigger: {
+        trigger: "#frameVideo",
+        toggleActions: "play pause reverse restart",
+        start: "-10% bottom",
+      },
+      onComplete: () => {
+        videoRef.current.play();
+      },
     });
 
     animateWithGsap(".g_fadeIn", {
@@ -55,6 +67,7 @@ const HowItWorks = () => {
             </div>
             <div className="hiw-video">
               <video
+                id="frameVideo"
                 className="pointer-events-none"
                 autoPlay
                 playsInline
