@@ -20,7 +20,12 @@ const HowItWorks = () => {
       ease: "power2.inOut",
     });
 
-    animateWithGsap('.g_fadeIn', { opacity: 1, y: 0, duration: 1, ease: 'power2.inOut' });
+    animateWithGsap(".g_fadeIn", {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "power2.inOut",
+    });
   }, []);
 
   return (
@@ -75,7 +80,7 @@ const HowItWorks = () => {
                   best graphic performance by far
                 </span>
               </p>
-
+              <br />
               <p className="hiw-text g_fadeIn">
                 Mobile{" "}
                 <span className="text-white">
